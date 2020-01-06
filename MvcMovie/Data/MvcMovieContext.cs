@@ -12,4 +12,4 @@ namespace MvcMovie.Data
 
         public DbSet<Movie> Movie { get; set; }
     }
-}
+}   

@@ -1,0 +1,11 @@
+﻿dotnet tool install --global dotnet-ef --version 3.1.0
+dotnet tool install --global dotnet-aspnet-codegenerator --version 3.1.0
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 3.1.0
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 3.1.0
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Utils --version 3.1.0
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.0
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 3.1.0
+
+dotnet aspnet-codegenerator controller -name MoviesController -m Movie -dc MvcMovieContext --relativeFolderPath Controllers
+rm Controllers¥MoviesController.cs
+dotnet aspnet-codegenerator controller -name MoviesController -m Movie -dc MvcMovieContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
